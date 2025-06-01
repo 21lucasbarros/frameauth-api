@@ -1,16 +1,17 @@
 {
   "name": "frameauth-api",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "API de autenticação FrameAuth",
+  "main": "dist/index.ts",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/index.ts"
+    "dev": "nodemon --watch src --ext ts --exec tsx src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.ts"
   },
   "keywords": [],
-  "author": "21lucasbarros",
-  "license": "ISC",
-  "type": "commonjs",
+  "author": "Lucas Barros (@21lucasbarros)",
+  "license": "MIT",
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "dotenv": "^16.5.0",
@@ -25,7 +26,7 @@
     "@types/jsonwebtoken": "^9.0.9",
     "@types/node": "^22.15.29",
     "nodemon": "^3.1.10",
-    "ts-node-dev": "^2.0.0",
+    "tsx": "^4.19.4",
     "typescript": "^5.8.3"
   }
 }
