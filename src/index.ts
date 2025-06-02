@@ -12,7 +12,10 @@ app.use(express.json());
 
 // Conectar ao MongoDB
 mongoose
-  .connect(process.env.MONGODB_URI || "mongodb://localhost:27017/frameauth")
+  .connect(
+    process.env.MONGODB_URI ||
+      "mongodb+srv://lucas235182:21022003@cluster0.yrdjb.mongodb.net/FrameAuth?retryWrites=true&w=majority&appName=Cluster0"
+  )
   .then(() => console.log("Conectado ao MongoDB"))
   .catch((err) => console.error("Erro ao conectar ao MongoDB:", err));
 
