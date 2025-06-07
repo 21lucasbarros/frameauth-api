@@ -51,9 +51,9 @@ export async function register(req: Request, res: Response): Promise<Response> {
     });
   } catch (error) {
     if (error instanceof z.ZodError) {
-      return res.status(400).json({ 
-        message: "Dados inválidos", 
-        errors: error.errors 
+      return res.status(400).json({
+        message: "Dados inválidos",
+        errors: error.errors,
       });
     }
     return res.status(500).json({ message: "Erro interno do servidor" });
@@ -94,9 +94,9 @@ export async function login(req: Request, res: Response): Promise<Response> {
     });
   } catch (error) {
     if (error instanceof z.ZodError) {
-      return res.status(400).json({ 
-        message: "Dados inválidos", 
-        errors: error.errors 
+      return res.status(400).json({
+        message: "Dados inválidos",
+        errors: error.errors,
       });
     }
     return res.status(500).json({ message: "Erro interno do servidor" });
